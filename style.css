@@ -1,0 +1,257 @@
+nav {
+    background-color: rgb(19, 19, 19);
+}
+
+body  {
+    background-color: rgb(19, 19, 19);
+}
+
+a.nav-link{
+    color: rgb(128, 128, 128);
+}
+a.nav-link:hover{
+    color: white;
+}
+#hambtn {
+    border: 1px solid rgb(128, 128, 128);
+}
+
+#navbarSupportedContent {
+    transition: 0.6s ease-in-out;
+}
+
+#utilitysect {
+    right: 120px;
+    top: 24px;
+}
+
+#accountsect{
+    right: 30px;
+    top: 7px;
+}
+
+#accountsect img:hover{
+    transition: 0.5s ease-in-out;
+    box-shadow: 0px 0px 10px red;
+}
+
+#accountdrop {
+    background-color: rgba(0, 0, 0, 0.955);
+}
+
+/* riadatto la posizione degli elementi a destra della navbar alla comparsa dell'hamburger menu */
+@media screen and (max-width: 991.28px) {
+    #utilitysect {
+        right: 150px;
+        top: 24px;
+    }
+    #accountsect{
+        right: 70px;
+        top: 7px;
+    }
+    .col img{
+        width: 250px;
+    }
+}
+
+/* riduco la larghezza della barra di ricerca in modo da non sovrapporsi al logo */
+@media screen and (max-width: 630px) {
+    .search-wrapper.active {
+        width: 200px;
+    }
+}
+
+/* riadatto il layout dei pulsanti in base al dispositivo utilizzato */
+@media screen and (max-width: 520px) {
+    #utilitysect {
+        top: 60px;
+        right: 30px;
+        margin-top: 10px;
+    }
+    main {
+        margin-top: 20px;
+    }
+    .search-wrapper.active {
+        width: 200px;
+    }
+    .col img{
+        width: 200px; 
+    }
+}
+
+/* elimino alcuni elementi impossibili da visualizzare in modo pulito sotto questa larghezza */
+@media screen and (max-width: 290px) {
+    #utilitysect li {
+        display: none;
+
+    }
+    
+}
+
+#netflixlg {
+    width: 110px;
+}
+
+.accountimg {
+    width: 40px;
+}
+
+#genresbtn {
+    background-color: black;
+    color: white;
+    border: 0.2px solid white;
+    border-radius: 0px;
+    width: 120px;
+}
+#menubtn li {
+    border: 1px solid white;
+    width: 40px;
+    height: 27px;
+    color: white;
+    cursor: pointer;
+}
+
+#menubtn li:hover {
+    box-shadow: 0px 0px 5px red;
+}
+
+.dropdown-menu {
+    transition: 0.2s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.819);
+}
+.dropdown-item:hover {
+    background-color: red;
+}
+
+.col {
+    margin: 1px;
+    padding: 0px;
+    margin-bottom: 30px;
+}
+
+.col img {
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.col img:hover {
+    margin-right: 25px;
+    margin-left: 25px;
+    box-shadow: 0px 0px 10px red;
+    transform: scale(1.1);
+}
+
+.social-i {
+    padding: 0;
+    margin-left: 10px;
+    height: 50px;
+    color: rgb(128, 128, 128);
+}
+.social-i .bi {
+    font-size: 30px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.social-i .bi:hover {
+    color: white;
+    transition: 0.5s ease-in-out;
+}
+
+.pageinfo {
+    margin-left: 10px;
+    color: rgb(128, 128, 128);
+}
+
+.pageinfo button{
+   background-color: rgb(19, 19, 19);
+   border: 2px solid rgb(128, 128, 128);
+   color: rgb(128, 128, 128);
+   height: 40px;
+   width: 120px;
+}
+
+.pageinfo button:hover{
+    color: white;
+    box-shadow: 0px 0px 5px red;
+    transition: 0.5s ease-in;
+ }
+
+
+
+/* impostazioni e animazione del pulsante search */
+.search-wrapper {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    border-radius: 4rem;
+    align-items: center;
+    justify-content: center;
+    /* background: rgb(19, 19, 19); */
+    /* border: 2px solid rgb(19, 19, 19); */
+    outline: none;
+    overflow: hidden;
+    transition: 400ms ease-in-out;
+    position: relative;
+  }
+  
+  .active {
+    width: 300px;
+  }
+  .search-wrapper input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-left: 40px;
+    margin-right: 2px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    font-size: 22px;
+    box-sizing: border-box;
+  }
+  .search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background: rgb(19, 19, 19);
+    margin-left: auto;
+    z-index: 1;
+  }
+  .search-btn i {
+    color: #fff;
+    font-size: 16px;
+  }
+
+  /* rendo invisibili i 3 caroselli in fondo alla pagina */
+  .scroll {
+    opacity: 0;
+  }
+
+  /* classe aggiunta da JS per far riapparire i caroselli con un'animazione fade/bounce */
+  .show-carousel {
+    animation-name: fade;
+    animation-duration: 3s;
+    animation-delay: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        scale: .5;
+    }
+    50% {
+        scale: 1.03;
+    }
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+}
